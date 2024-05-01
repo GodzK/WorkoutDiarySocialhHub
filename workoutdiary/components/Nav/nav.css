@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 20;
 }
 .logo{
     font-size: 32px;
@@ -33,9 +33,6 @@
     transition: .3s;
 }
 .navbar a:hover::before {
-    width: 50px;
+    width: 30px;
 }
-.dumbbell{
-    color: rgb(255, 255, 255);
-    font-size: 22px;
-}
+
