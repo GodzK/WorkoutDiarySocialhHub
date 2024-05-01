@@ -14,22 +14,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
 import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
-
+import ChatDropdown from "@/components/DropdownChat/ChatDropdown";
 export default function Home() {  
   const [open , setOpen] = useState();
   return (
   
        <div className="main-container">
        <Nav>
-        <NavItem icon = {faPlusCircle} />
-        <NavItem icon = {faBell} />
-        <NavItem icon = {faComment} />
-        <NavItem icon = {faChevronCircleDown}>
+        <NavItem>
+          <ChatDropdown>
+          </ChatDropdown>
           <DropdownMenu>
-        
           </DropdownMenu>
          </NavItem>
-
         </Nav>
        <h1>this is index</h1>  
        </div>
