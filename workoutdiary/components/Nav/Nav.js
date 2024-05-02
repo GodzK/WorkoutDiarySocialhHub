@@ -15,7 +15,7 @@ function Nav(props) {
     <header className="header">
       <a className="logo">
         <FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon>
-        workout diary
+       workout diary
       </a>
       <nav className="navbar">
         {props.children}

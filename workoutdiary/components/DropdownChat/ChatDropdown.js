@@ -32,52 +32,39 @@ function ChatDropdown() {
         classNames="menu-primary"
       >
         <div className="menu">
-          <DropdownItem>
+        <Link href="/Chat" passHref>
+  <div className="link-dropdown">
+    <FontAwesomeIcon
+      icon={faUserCircle}
+      style={{ paddingRight: "0.3rem" }}
+    ></FontAwesomeIcon>{" "}
+    Friend1
+  </div>
+</Link>
+          <DropdownItem href="">
             <Link href="" className="link-dropdown">
-              <FontAwesomeIcon
-                icon={faUserCircle}
-                style={{ paddingRight: "0.3rem" }}
-              ></FontAwesomeIcon>{" "}
-              chat dropdown
+              <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon> Friend2
             </Link>
           </DropdownItem>
-
-          <DropdownItem goToMenu="settings">
+          <DropdownItem href="">
             <Link href="" className="link-dropdown">
-              <FontAwesomeIcon icon={faCogs}></FontAwesomeIcon> Settings
+              <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon> Friend3
+            </Link>
+          </DropdownItem>
+          <DropdownItem goToMenu="Chat">
+            <Link href="" className="link-dropdown">
+              <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon> Friend4
             </Link>
           </DropdownItem>
         </div>
       </CSSTransition>
 
       <CSSTransition
-        in={activeMenu === "settings"}
+        in={activeMenu === "Chat"}
         unmountOnExit
         timeout={500}
         classNames="menu-setting"
-      >
-        <div className="menu">
-          <DropdownItem goToMenu="page">
-            <Link href="" className="link-dropdown">
-              <FontAwesomeIcon
-                icon={faArrowAltCircleLeft}
-                style={{ paddingRight: "0.3rem" }}
-              ></FontAwesomeIcon>{" "}
-              get back
-            </Link>
-          </DropdownItem>
-          <DropdownItem goToMenu="settings">
-            <Link href="" className="link-dropdown">
-              <FontAwesomeIcon icon={faCogs}></FontAwesomeIcon> Language
-            </Link>
-          </DropdownItem>
-          <DropdownItem goToMenu="settings">
-            <Link href="" className="link-dropdown">
-              <FontAwesomeIcon icon={faUserSecret}></FontAwesomeIcon> Privacy
-            </Link>
-          </DropdownItem>
-        </div>
-      </CSSTransition>
+      ></CSSTransition>
     </div>
   );
 }

@@ -22,6 +22,7 @@ export default function Home() {
        <div className="main-container">
        <Nav>
         <NavItem>
+         
           <ChatDropdown>
           </ChatDropdown>
           <DropdownMenu>
