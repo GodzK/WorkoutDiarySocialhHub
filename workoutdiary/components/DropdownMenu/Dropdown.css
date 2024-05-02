@@ -28,6 +28,7 @@
 .menu-primary-enter{
  position: absolute;
  transform: translateX(-110%);
+ background-color: red;
 }
 .menu-primary-enter-active{
     transform: translateX(0%);

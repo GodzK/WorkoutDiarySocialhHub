@@ -3,8 +3,70 @@
     margin-bottom: auto;
   }
   
-  .card {
-    height: 500px;
-    border-radius: 15px !important;
-    background-color: rgba(0, 0, 0, 0.4) !important;
-  }
+
+.Former{
+  width: 400vh;
+  background-color: blueviolet;
+}
+
+.Chat-container{
+  position: absolute;
+  top: 87px;
+  width: auto;
+  right: -10vh;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  padding: 1rem;
+  overflow: hidden;
+}
+.long{
+  background-color: rgb(255, 255, 255);
+  width: 150vh;
+  height: 60vh;
+}
+h2{
+  color: black;
+}
+.h2{
+  display: flex;
+  padding: 1rem;
+}
+input[type=text]{
+  width:45%;
+  border:2px solid #aaa;
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+  color: black;
+
+}
+
+input[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.h2-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 1rem;
+}
+
+.user-icon {
+  color: black;
+  margin-left: 20px;
+  font-size: 1.56rem;
+  padding-left: 1rem;
+}
+.user-type{
+  padding-left: 80vh;
+}

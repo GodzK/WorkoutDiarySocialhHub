@@ -7,10 +7,12 @@ import {
   faChevronCircleDown,
   faComment,
   faDumbbell,
+  faHome,
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import ChatDropdown from "../DropdownChat/ChatDropdown";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import Noti from "../Notification/Noti";
 function Navitem() {
   const [isOpen, setIsOpen] = useState(false);
   const [isChat, setChat] = useState(false);
@@ -18,18 +20,18 @@ function Navitem() {
 
   const handleDropdownClick = (dropdownName) => {
     if (dropdownName === activeDropdown) {
-      setActiveDropdown(""); // Close the currently open dropdown
+      setActiveDropdown(""); 
     } else {
-      setActiveDropdown(dropdownName); // Open the clicked dropdown
+      setActiveDropdown(dropdownName); 
     }
   };
 
   return (
     <>
-      <a href="#" onClick={() => handleDropdownClick("chat")}>
-        <FontAwesomeIcon icon={faPlusCircle} />
+      <a href="#" onClick={() => handleDropdownClick("home")}>
+        <FontAwesomeIcon icon={faHome} />
       </a>
-      <a href="#" onClick={() => handleDropdownClick("chat")}>
+      <a href="#" onClick={() => handleDropdownClick("noti")}>
         <FontAwesomeIcon icon={faBell} />
       </a>
       <a href="#" onClick={() => handleDropdownClick("chat")}>
@@ -40,8 +42,10 @@ function Navitem() {
       </a>
 
       {isChat && <ChatDropdown />}
+      {activeDropdown === "Home" && <ChatDropdown />}
       {activeDropdown === "chat" && <ChatDropdown />}
       {activeDropdown === "menu" && <DropdownMenu />}
+      {activeDropdown === "noti" && <Noti />}
     </>
   );
 }
