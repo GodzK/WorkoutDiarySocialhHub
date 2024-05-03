@@ -1,7 +1,9 @@
 "use client"
-
-import Image from "next/image";
-import Nav from "@/components/Nav/Nav"
+import Nav from '@/components/Nav/Nav'
+import './Upro.css'
+import Image from 'next/image'
+import blackbg from "./blackbg.png"
+import usericon from "./usericon.png"
 import NavItem from "@/components/NavItem/Navitem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {useState} from "react";
@@ -16,25 +18,40 @@ import { CSSTransition } from "react-transition-group";
 import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
 import ChatDropdown from "@/components/DropdownChat/ChatDropdown";
 import Noti from "@/components/Notification/Noti"
-export default function Home() {  
-  const [open , setOpen] = useState();
+
+function Upro() {
   return (
-  
-       <div className="main-container">
+    <div>
        <Nav>
         <NavItem>
+         
           <ChatDropdown>
           </ChatDropdown>
           <DropdownMenu>
           </DropdownMenu>
          </NavItem>
         </Nav>
-        <div>
+      <div>
       <h1 style={{color:"black"}}> Hi there</h1>
-      <h1 style={{color:"black"}}> Hi there</h1>
-      <h1 style={{color:"black"}}> Hi there</h1>
+       <h1 style={{color:"black"}}> Hi there</h1>
+       <h1 style={{color:"black"}}> Hi there</h1>
         </div>
-        <h1>This is the real</h1>
-       </div>
-  );
+
+  <div className='profile-container'>
+  <div className='profile'>
+    <div className='profile-header'>
+      <div className='profile-pic'>
+  <Image src={usericon}/>
+      </div>
+      <h1>Phakaphol Dherachaisuphakij</h1>
+      <p>Front-end Blogger/Author/Front-end Developer from King Mongkut's University of Technology Thonburi (KMUTT)</p>
+    </div>
+    
+    
+    </div>
+  </div>
+</div>
+  )
 }
+
+export default Upro

@@ -9,7 +9,6 @@ import {
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-
 function Nav(props) {
   return (
     <header className="header">

@@ -13,6 +13,7 @@ import {
 import ChatDropdown from "../DropdownChat/ChatDropdown";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import Noti from "../Notification/Noti";
+import Link from "next/link";
 function Navitem() {
   const [isOpen, setIsOpen] = useState(false);
   const [isChat, setChat] = useState(false);
@@ -28,9 +29,9 @@ function Navitem() {
 
   return (
     <>
-      <a href="#" onClick={() => handleDropdownClick("home")}>
-        <FontAwesomeIcon icon={faHome} />
-      </a>
+ <a href="#" onClick={() => { window.location.href = '/'; }}>
+  <FontAwesomeIcon icon={faHome} />
+</a>
       <a href="#" onClick={() => handleDropdownClick("noti")}>
         <FontAwesomeIcon icon={faBell} />
       </a>

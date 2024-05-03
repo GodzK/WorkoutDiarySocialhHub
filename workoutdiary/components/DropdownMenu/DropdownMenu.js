@@ -9,7 +9,6 @@ import { CSSTransition } from "react-transition-group";
 import Link from "next/link";
 import "./Dropdown.css";
 import { useState } from "react";
-
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState("page");
   function DropdownItem(props) {
@@ -33,7 +32,7 @@ function DropdownMenu() {
       >
         <div className="menu">
           <DropdownItem>
-            <Link href="" className="link-dropdown">
+            <Link href="/User" className="link-dropdown">
               <FontAwesomeIcon
                 icon={faUserCircle}
                 style={{ paddingRight: "0.3rem" }}
