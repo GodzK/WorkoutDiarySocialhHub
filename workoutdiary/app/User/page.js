@@ -9,9 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {useState} from "react";
 import {
   faBell,
+  faCheck,
+  faCheckCircle,
   faChevronCircleDown,
   faComment,
   faDumbbell,
+  faIdBadge,
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
@@ -41,7 +44,7 @@ function Upro() {
             <div className='profile-pic'>
               <Image src={usericon} alt="Profile Picture" />
             </div>
-            <h1>Phakaphol Dherachaisuphakij</h1>
+            <h1>Phakaphol Dherachaisuphakij <FontAwesomeIcon icon={faCheckCircle}></FontAwesomeIcon></h1> 
             <p>Front-end Blogger/Author/Front-end Developer from King Mongkut's University of Technology Thonburi (KMUTT)</p>
           </div>
           
