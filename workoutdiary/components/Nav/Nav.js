@@ -12,10 +12,13 @@ import {
 function Nav(props) {
   return (
     <header className="header">
-      <a className="logo">
+      <div href="#" onClick={() => { window.location.href = '/'; }}>
+         <a className="logo">
         <FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon>
        workout diary
       </a>
+      </div>
+     
       <nav className="navbar">
         {props.children}
       </nav>

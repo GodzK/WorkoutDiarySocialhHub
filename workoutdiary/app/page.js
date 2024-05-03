@@ -16,7 +16,8 @@ import { CSSTransition } from "react-transition-group";
 import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
 import ChatDropdown from "@/components/DropdownChat/ChatDropdown";
 import Noti from "@/components/Notification/Noti"
-export default function Home() {  
+import usericon from "./usericon.png"
+export default function Home({post}) {  
   const [open , setOpen] = useState();
   return (
   
@@ -29,12 +30,11 @@ export default function Home() {
           </DropdownMenu>
          </NavItem>
         </Nav>
-        <div>
-      <h1 style={{color:"black"}}> Hi there</h1>
-      <h1 style={{color:"black"}}> Hi there</h1>
-      <h1 style={{color:"black"}}> Hi there</h1>
+        <div className="rc">
+            <div>
         </div>
-        <h1>This is the real</h1>
+        </div>
+       <h1>Add some text</h1>
        </div>
   );
 }

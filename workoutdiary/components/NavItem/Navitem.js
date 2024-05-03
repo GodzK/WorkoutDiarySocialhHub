@@ -3,6 +3,7 @@ import "./Navitem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {useState} from "react";
 import {
+  faAdd,
   faBell,
   faChevronCircleDown,
   faComment,
@@ -17,7 +18,7 @@ import Link from "next/link";
 function Navitem() {
   const [isOpen, setIsOpen] = useState(false);
   const [isChat, setChat] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(""); // New state variable
+  const [activeDropdown, setActiveDropdown] = useState(""); 
 
   const handleDropdownClick = (dropdownName) => {
     if (dropdownName === activeDropdown) {
@@ -29,6 +30,9 @@ function Navitem() {
 
   return (
     <>
+      <Link href="/share"  >
+        <FontAwesomeIcon icon={faAdd} />
+      </Link>
  <a href="#" onClick={() => { window.location.href = '/'; }}>
   <FontAwesomeIcon icon={faHome} />
 </a>

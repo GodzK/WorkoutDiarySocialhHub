@@ -18,4 +18,14 @@
     font-family: 'Cascadia Code';
    
 }
-
+.rc{
+    background-image: url("./bgheader.jpg");
+    background-size: cover;
+    z-index:2000;
+    margin-top: 4rem;
+    padding-top: 30rem;
+}
+body{
+    background-color: black;
+    color: azure;
+}
