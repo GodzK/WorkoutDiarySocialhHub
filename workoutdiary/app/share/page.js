@@ -16,7 +16,7 @@ import {
   import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
   import ChatDropdown from "@/components/DropdownChat/ChatDropdown";
   import Noti from "@/components/Notification/Noti"
-export default function ShareMealPage() {
+export default function Share() {
   return (
     <>
      <Nav>
@@ -33,7 +33,7 @@ export default function ShareMealPage() {
       </div>
       <header className={classes.header}>
         <h1>
-         Its time to <span className={classes.highlight}>Share your plan!!</span>
+         Its time to Share your plan!!
         </h1>
         <p>Or any other workout daily</p>
       </header>

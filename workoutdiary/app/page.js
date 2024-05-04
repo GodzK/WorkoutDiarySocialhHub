@@ -17,24 +17,33 @@ import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
 import ChatDropdown from "@/components/DropdownChat/ChatDropdown";
 import Noti from "@/components/Notification/Noti"
 import usericon from "./usericon.png"
+import Post from "@/components/Post/Post"
+import postData from './post.json';
 export default function Home({post}) {  
   const [open , setOpen] = useState();
   return (
   
-       <div className="main-container">
-       <Nav>
+    <div className="main-container">
+      <Nav>
         <NavItem>
-          <ChatDropdown>
-          </ChatDropdown>
-          <DropdownMenu>
-          </DropdownMenu>
-         </NavItem>
-        </Nav>
-        <div className="rc">
-            <div>
-        </div>
-        </div>
-       <h1>Add some text</h1>
-       </div>
+          <ChatDropdown />
+          <DropdownMenu />
+        </NavItem>
+      </Nav>
+      <div className="rc"></div>
+      <div className="App">
+        {postData.map((post, index) => (
+          <Post
+            key={index}
+            user={post.user}
+            content={post.content}
+            image={post.image}
+            likes={post.likes}
+            comments={post.comments}
+            shares={post.shares}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
