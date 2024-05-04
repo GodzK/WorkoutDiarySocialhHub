@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 import {
   faShareSquare,
   faThumbsUp,
@@ -8,7 +9,7 @@ import {
 import "./Post.css";
 import up from "./pf.png";
 import yoga from './yoga.jpg'
-
+import usericon from "./usericon.png"
 function Post({ user, content, image, initialLikes = 0, comments, shares }) {
   const [likes, setLikes] = useState(initialLikes);
   
